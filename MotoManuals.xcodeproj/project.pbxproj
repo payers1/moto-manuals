@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		5822C2E021420F5D0077AEAD /* TOC.json in Resources */ = {isa = PBXBuildFile; fileRef = 5822C2DF21420F5D0077AEAD /* TOC.json */; };
-		58383AEA212CD12300526675 /* 2018_MT07.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 58383AE9212CD12300526675 /* 2018_MT07.pdf */; };
 		58D4AC12212C6002005E26FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4AC11212C6002005E26FD /* AppDelegate.swift */; };
 		58D4AC19212C6002005E26FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D4AC17212C6002005E26FD /* Main.storyboard */; };
 		58D4AC1B212C6003005E26FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D4AC1A212C6003005E26FD /* Assets.xcassets */; };
 		58D4AC1E212C6003005E26FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D4AC1C212C6003005E26FD /* LaunchScreen.storyboard */; };
 		58E071E12141A0CF00E91078 /* TableOfContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E071E02141A0CF00E91078 /* TableOfContentsViewController.swift */; };
 		58E071E32141B15B00E91078 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E071E22141B15B00E91078 /* PDFViewController.swift */; };
+		58EB70BC2144454C006DDE4B /* AvailableManualCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EB70BB2144454C006DDE4B /* AvailableManualCell.swift */; };
+		58FBC734214416BA0033F21C /* AvailableManualsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBC733214416BA0033F21C /* AvailableManualsViewController.swift */; };
+		58FBC738214435B60033F21C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 58FBC737214435B60033F21C /* awsconfiguration.json */; };
+		CC6B0F18793B3B5A1C1C0AC5 /* Pods_MotoManuals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A40BB95C63024C983C57D6 /* Pods_MotoManuals.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00004EBFEAE48A84C4FE0BD9 /* Pods-MotoManuals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotoManuals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MotoManuals/Pods-MotoManuals.debug.xcconfig"; sourceTree = "<group>"; };
+		02A40BB95C63024C983C57D6 /* Pods_MotoManuals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotoManuals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5822C2DF21420F5D0077AEAD /* TOC.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TOC.json; sourceTree = "<group>"; };
-		58383AE9212CD12300526675 /* 2018_MT07.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2018_MT07.pdf; sourceTree = "<group>"; };
 		58D4AC0E212C6002005E26FD /* MotoManuals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotoManuals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D4AC11212C6002005E26FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58D4AC18212C6002005E26FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +32,10 @@
 		58D4AC1F212C6004005E26FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58E071E02141A0CF00E91078 /* TableOfContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContentsViewController.swift; sourceTree = "<group>"; };
 		58E071E22141B15B00E91078 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		58EB70BB2144454C006DDE4B /* AvailableManualCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableManualCell.swift; sourceTree = "<group>"; };
+		58FBC733214416BA0033F21C /* AvailableManualsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableManualsViewController.swift; sourceTree = "<group>"; };
+		58FBC737214435B60033F21C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		B809F7DF71D352FD7F73D2EF /* Pods-MotoManuals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotoManuals.release.xcconfig"; path = "Pods/Target Support Files/Pods-MotoManuals/Pods-MotoManuals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6B0F18793B3B5A1C1C0AC5 /* Pods_MotoManuals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +55,8 @@
 			children = (
 				58D4AC10212C6002005E26FD /* MotoManuals */,
 				58D4AC0F212C6002005E26FD /* Products */,
+				924C974BE8DF213412E78302 /* Pods */,
+				76C6E948F86C9C7135F96CFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,8 +72,10 @@
 			isa = PBXGroup;
 			children = (
 				58D4AC11212C6002005E26FD /* AppDelegate.swift */,
-				58383AE9212CD12300526675 /* 2018_MT07.pdf */,
+				58EB70BB2144454C006DDE4B /* AvailableManualCell.swift */,
+				58FBC733214416BA0033F21C /* AvailableManualsViewController.swift */,
 				58E071E02141A0CF00E91078 /* TableOfContentsViewController.swift */,
+				58FBC737214435B60033F21C /* awsconfiguration.json */,
 				5822C2DF21420F5D0077AEAD /* TOC.json */,
 				58E071E22141B15B00E91078 /* PDFViewController.swift */,
 				58D4AC17212C6002005E26FD /* Main.storyboard */,
@@ -73,6 +86,23 @@
 			path = MotoManuals;
 			sourceTree = "<group>";
 		};
+		76C6E948F86C9C7135F96CFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02A40BB95C63024C983C57D6 /* Pods_MotoManuals.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		924C974BE8DF213412E78302 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00004EBFEAE48A84C4FE0BD9 /* Pods-MotoManuals.debug.xcconfig */,
+				B809F7DF71D352FD7F73D2EF /* Pods-MotoManuals.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58D4AC22212C6004005E26FD /* Build configuration list for PBXNativeTarget "MotoManuals" */;
 			buildPhases = (
+				289A5D89DE4CA3CCA391F724 /* [CP] Check Pods Manifest.lock */,
 				58D4AC0A212C6002005E26FD /* Sources */,
 				58D4AC0B212C6002005E26FD /* Frameworks */,
 				58D4AC0C212C6002005E26FD /* Resources */,
+				70F03AEF89528A5A35CA1039 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -105,6 +137,7 @@
 				TargetAttributes = {
 					58D4AC0D212C6002005E26FD = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -133,19 +166,76 @@
 			files = (
 				58D4AC1E212C6003005E26FD /* LaunchScreen.storyboard in Resources */,
 				58D4AC1B212C6003005E26FD /* Assets.xcassets in Resources */,
+				58FBC738214435B60033F21C /* awsconfiguration.json in Resources */,
 				58D4AC19212C6002005E26FD /* Main.storyboard in Resources */,
-				58383AEA212CD12300526675 /* 2018_MT07.pdf in Resources */,
 				5822C2E021420F5D0077AEAD /* TOC.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		289A5D89DE4CA3CCA391F724 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MotoManuals-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70F03AEF89528A5A35CA1039 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MotoManuals/Pods-MotoManuals-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/CircleProgressView/CircleProgressView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleProgressView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MotoManuals/Pods-MotoManuals-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58D4AC0A212C6002005E26FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58EB70BC2144454C006DDE4B /* AvailableManualCell.swift in Sources */,
+				58FBC734214416BA0033F21C /* AvailableManualsViewController.swift in Sources */,
 				58E071E32141B15B00E91078 /* PDFViewController.swift in Sources */,
 				58D4AC12212C6002005E26FD /* AppDelegate.swift in Sources */,
 				58E071E12141A0CF00E91078 /* TableOfContentsViewController.swift in Sources */,
@@ -290,17 +380,21 @@
 		};
 		58D4AC23212C6004005E26FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00004EBFEAE48A84C4FE0BD9 /* Pods-MotoManuals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UHY669RJSP;
 				INFOPLIST_FILE = MotoManuals/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = payers.MotoManuals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -308,11 +402,14 @@
 		};
 		58D4AC24212C6004005E26FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B809F7DF71D352FD7F73D2EF /* Pods-MotoManuals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UHY669RJSP;
 				INFOPLIST_FILE = MotoManuals/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
