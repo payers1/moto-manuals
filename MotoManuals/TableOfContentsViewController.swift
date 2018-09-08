@@ -36,7 +36,6 @@ class TableOfContentsViewController: UITableViewController {
     let decoder = JSONDecoder()
     do {
       if let fileURL = Bundle.main.url(forResource: "TOC", withExtension: "json") {
-        print(fileURL.path)
         if FileManager.default.fileExists(atPath: fileURL.path) {
           let contentData = FileManager.default.contents(atPath: fileURL.path)
           TOC = try decoder.decode(TableOfContents.self, from: contentData!)

@@ -10,20 +10,19 @@ import Foundation
 import UIKit
 import PDFKit
 
-
 class PDFViewController: UIViewController {
-  let fileNames = ["2018_MT07.pdf"]
+  let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+  let fileNames = ["2018_zero_s-sr-ds-dsr.pdf"]
   var fileURLs = [URL]()
-  var page: Int?
+  var page: Int? = 1
   
   func prepareFileURLs() {
     for file in fileNames {
       let fileParts = file.components(separatedBy: ".")
-      if let fileURL = Bundle.main.url(forResource: fileParts[0], withExtension: fileParts[1]) {
-        if FileManager.default.fileExists(atPath: fileURL.path) {
-          fileURLs.append(fileURL as URL)
+      let fileURL = DocumentsDirectory.path + "/" + file
+        if FileManager.default.fileExists(atPath: fileURL) {
+          fileURLs.append(URL(fileURLWithPath: fileURL))
         }
-      }
     }
   }
   
