@@ -13,6 +13,8 @@ import AWSS3
 class AvailableManualCell: UITableViewCell {
   @IBOutlet weak var myButton: UIButton?
   @IBOutlet weak var myLabel: UILabel?
+  @IBOutlet weak var myProgressView: UIProgressView!
+
   @IBAction func downloadManual(_ sender: UIButton) {
     downloadFiles()
   }

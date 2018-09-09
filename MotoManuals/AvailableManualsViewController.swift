@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class AvailableManualsViewController: UITableViewController {
-  @IBOutlet weak var myProgressView: UIProgressView!
   let fileManager = FileManager.default
   let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
   
