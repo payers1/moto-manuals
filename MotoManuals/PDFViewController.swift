@@ -6,15 +6,20 @@
 //  Copyright © 2018 Phillip Ayers. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import PDFKit
 
 class PDFViewController: UIViewController {
-  let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
   var pdfFileName: String?
   var fileURLs = [URL]()
   var page: Int? = 1
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    prepareFileURLs()
+    let pdfView = configurePdfView()
+    self.view.addSubview(pdfView)
+  }
   
   func prepareFileURLs() {
     let fileURL = DocumentsDirectory.path + "/" + pdfFileName!
@@ -24,19 +29,14 @@ class PDFViewController: UIViewController {
   }
   
   func configurePdfView() -> UIView {
-    let pdfView = PDFView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height - 50))
+    let defaultRect = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+    let pdfView = PDFView(frame: defaultRect)
     pdfView.document = PDFDocument(url: fileURLs[0])
     pdfView.displayMode = .singlePageContinuous
     pdfView.autoScales = true
-//    pdfView.maxScaleFactor = 0.81
-    pdfView.go(to: (pdfView.document?.page(at: page! - 1))!)
+    pdfView.go(
+      to: CGRect(x: 0, y: 40, width: self.view.frame.width, height: self.view.frame.height),
+      on: (pdfView.document?.page(at: page! - 1))!)
     return pdfView
-  }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    prepareFileURLs()
-    let pdfView = configurePdfView()
-    self.view.addSubview(pdfView)
   }
 }

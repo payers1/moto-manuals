@@ -23,8 +23,8 @@ struct Chapter: Codable {
   var page: Int
 }
 
+
 var TOC: TableOfContents = TableOfContents(sections: [])
-let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
 
 class TableOfContentsViewController: UITableViewController {
   var tocFilename: String?

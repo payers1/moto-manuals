@@ -21,8 +21,7 @@ class AvailableManualCell: UITableViewCell {
   
   var filename: String?
   let fileManager = FileManager.default
-  let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-  
+
   func downloadFiles() {
     downloadTableOfContentsFromS3()
     downloadManualFromS3()
@@ -78,8 +77,8 @@ class AvailableManualCell: UITableViewCell {
   }
   
   func saveFileToLocalStorage(data: Data, name: String) {
+    let fileURL = DocumentsDirectory.appendingPathComponent(name)
     do {
-      let fileURL = DocumentsDirectory.appendingPathComponent(name)
       try data.write(to: fileURL)
     } catch {
       print(error)

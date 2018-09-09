@@ -11,12 +11,9 @@ import UIKit
 
 class AvailableManualsViewController: UITableViewController {
   let fileManager = FileManager.default
-  let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
   
   let availableManualTitles = [
-//    "2018 Yamaha MT-07",
     "2018 BMW R1200RS",
-//    "2018 Kawasaki KLX110",
     "2018 Triumph Tiger 800",
     "2018 Zero S",
     "2018 Zero SR",
@@ -25,9 +22,7 @@ class AvailableManualsViewController: UITableViewController {
   ]
   
   let availableManualFilenames = [
-//    "2018_yamaha_mt07",
     "2018_bmw_r1200rs",
-//    "2018_kawasaki_klx110",
     "2018_triumph_tiger800",
     "2018_zero_s-sr-ds-dsr",
     "2018_zero_s-sr-ds-dsr",
@@ -35,10 +30,6 @@ class AvailableManualsViewController: UITableViewController {
     "2018_zero_s-sr-ds-dsr"
   ]
 
-  override func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
-  
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return availableManualTitles.count
   }
@@ -48,7 +39,7 @@ class AvailableManualsViewController: UITableViewController {
     if fileManager.fileExists(atPath: DocumentsDirectory.path + "/" + availableManualFilenames[indexPath.row] + ".pdf") {
       myCell?.myButton?.isHidden = true
       myCell?.accessoryType = .disclosureIndicator
-    } else {}
+    }
     myCell?.myLabel?.text = availableManualTitles[indexPath.row]
     myCell?.filename = availableManualFilenames[indexPath.row]
     return myCell!

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
