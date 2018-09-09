@@ -23,9 +23,13 @@ struct Chapter: Codable {
   var page: Int
 }
 
+
 var TOC: TableOfContents = TableOfContents(sections: [])
+let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
 
 class TableOfContentsViewController: UITableViewController {
+  var tocFilename: String?
+  var pdfFilename: String?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,13 +39,17 @@ class TableOfContentsViewController: UITableViewController {
   func loadTableOfContentsFromJSON() {
     let decoder = JSONDecoder()
     do {
-      if let fileURL = Bundle.main.url(forResource: "TOC", withExtension: "json") {
-        if FileManager.default.fileExists(atPath: fileURL.path) {
-          let contentData = FileManager.default.contents(atPath: fileURL.path)
+      let fileURL = DocumentsDirectory.path + "/" +  tocFilename!;
+        if FileManager.default.fileExists(atPath: fileURL) {
+          let contentData = FileManager.default.contents(atPath: fileURL)
           TOC = try decoder.decode(TableOfContents.self, from: contentData!)
-        }
+      } else {
+          print("TOC DOES NOT EXIST1")
       }
-    } catch {}
+//      }
+    } catch {
+      print("TOC DOES NOT EXIST2 \(error)")
+    }
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,6 +59,7 @@ class TableOfContentsViewController: UITableViewController {
         let chapter = section.chapters[indexPath.row]
         let destinationViewController = segue.destination as! PDFViewController
         destinationViewController.page = chapter.page
+        destinationViewController.pdfFileName = pdfFilename
       }
     }
   }
