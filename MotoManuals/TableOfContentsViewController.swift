@@ -23,7 +23,6 @@ struct Chapter: Codable {
   var page: Int
 }
 
-
 var TOC: TableOfContents = TableOfContents(sections: [])
 let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
 
@@ -38,17 +37,14 @@ class TableOfContentsViewController: UITableViewController {
   
   func loadTableOfContentsFromJSON() {
     let decoder = JSONDecoder()
-    do {
-      let fileURL = DocumentsDirectory.path + "/" +  tocFilename!;
-        if FileManager.default.fileExists(atPath: fileURL) {
-          let contentData = FileManager.default.contents(atPath: fileURL)
+    let fileURL = DocumentsDirectory.path + "/" +  tocFilename!;
+      if FileManager.default.fileExists(atPath: fileURL) {
+        let contentData = FileManager.default.contents(atPath: fileURL)
+        do {
           TOC = try decoder.decode(TableOfContents.self, from: contentData!)
-      } else {
-          print("TOC DOES NOT EXIST1")
-      }
-//      }
-    } catch {
-      print("TOC DOES NOT EXIST2 \(error)")
+        } catch {
+          print("JSON decoding failed")
+        }
     }
   }
   

@@ -36,7 +36,7 @@ class AvailableManualCell: UITableViewCell {
         print("done")
         self.saveFileToLocalStorage(data: data!, name: "\(self.filename!)_TOC.json")
       } else {
-        print("error")
+        print(error!)
       }
     }
     
@@ -66,7 +66,7 @@ class AvailableManualCell: UITableViewCell {
           self.accessoryType = .disclosureIndicator
         }
       } else {
-        print("error")
+        print(error!)
       }
     }
     let transferUtility = AWSS3TransferUtility.default()
@@ -82,7 +82,7 @@ class AvailableManualCell: UITableViewCell {
       let fileURL = DocumentsDirectory.appendingPathComponent(name)
       try data.write(to: fileURL)
     } catch {
-      print("error 1")
+      print(error)
       return
     }
   }
