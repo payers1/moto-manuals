@@ -35,14 +35,14 @@ class AvailableManualsViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let myCell = tableView.dequeueReusableCell(withIdentifier: "myCell") as? AvailableManualCell
+    let availableManualCell = tableView.dequeueReusableCell(withIdentifier: "availableManualCell") as? AvailableManualCell
     if fileManager.fileExists(atPath: DocumentsDirectory.path + "/" + availableManualFilenames[indexPath.row] + ".pdf") {
-      myCell?.myButton?.isHidden = true
-      myCell?.accessoryType = .disclosureIndicator
+      availableManualCell?.downloadButton?.isHidden = true
+      availableManualCell?.accessoryType = .disclosureIndicator
     }
-    myCell?.myLabel?.text = availableManualTitles[indexPath.row]
-    myCell?.filename = availableManualFilenames[indexPath.row]
-    return myCell!
+    availableManualCell?.myLabel?.text = availableManualTitles[indexPath.row]
+    availableManualCell?.filename = availableManualFilenames[indexPath.row]
+    return availableManualCell!
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

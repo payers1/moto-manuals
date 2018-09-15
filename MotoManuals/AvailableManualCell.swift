@@ -6,12 +6,11 @@
 //  Copyright © 2018 Phillip Ayers. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import AWSS3
 
 class AvailableManualCell: UITableViewCell {
-  @IBOutlet weak var myButton: UIButton?
+  @IBOutlet weak var downloadButton: UIButton?
   @IBOutlet weak var myLabel: UILabel?
   @IBOutlet weak var myProgressView: UIProgressView!
 
