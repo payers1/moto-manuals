@@ -6,28 +6,35 @@
 //  Copyright © 2018 Phillip Ayers. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class AvailableManualsViewController: UITableViewController {
   let fileManager = FileManager.default
   
   let availableManualTitles = [
+    "2017 Yamaha FZ07",
+    "2018 BMW G310GS",
     "2018 BMW R1200RS",
     "2018 Triumph Tiger 800",
+    "2018 Yamaha MT07",
     "2018 Zero S",
     "2018 Zero SR",
     "2018 Zero DS",
-    "2018 Zero DSR"
+    "2018 Zero DSR",
+    "2019 Indian Scout"
   ]
   
   let availableManualFilenames = [
+    "2017_yamaha_fz07",
+    "2018_bmw_g310gs",
     "2018_bmw_r1200rs",
     "2018_triumph_tiger800",
+    "2018_yamaha_mt07",
     "2018_zero_s-sr-ds-dsr",
     "2018_zero_s-sr-ds-dsr",
     "2018_zero_s-sr-ds-dsr",
-    "2018_zero_s-sr-ds-dsr"
+    "2018_zero_s-sr-ds-dsr",
+    "2019_indian_scout"
   ]
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
