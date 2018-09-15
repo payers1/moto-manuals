@@ -40,7 +40,7 @@ class AvailableManualCell: UITableViewCell {
     }
     
     let transferUtility = AWSS3TransferUtility.default()
-    _ = transferUtility.downloadData(
+    transferUtility.downloadData(
       forKey: "public/" + filename! + "_TOC.json",
       expression: expression,
       completionHandler: completionHandler
@@ -48,12 +48,13 @@ class AvailableManualCell: UITableViewCell {
   }
 
   func downloadManualFromS3() {
+    myProgressView.isHidden = false
     let expression = AWSS3TransferUtilityDownloadExpression()
     expression.progressBlock = {(task, progress) in
       print("progress \(progress) \(task.progress)")
-      //      DispatchQueue.main.async {
-      //        self.myProgressView.progress = Float(task.progress.fractionCompleted)
-      //      }
+      DispatchQueue.main.async {
+        self.myProgressView.progress = Float(task.progress.fractionCompleted)
+      }
     }
     var completionHandler: AWSS3TransferUtilityDownloadCompletionHandlerBlock?
     completionHandler = { (task, URL, data, error) -> Void in
@@ -61,15 +62,16 @@ class AvailableManualCell: UITableViewCell {
         print("done")
         self.saveFileToLocalStorage(data: data!, name: "\(self.filename!).pdf")
         DispatchQueue.main.async {
-          self.myButton?.isHidden = true
+          self.downloadButton?.isHidden = true
           self.accessoryType = .disclosureIndicator
+          self.myProgressView.isHidden = true
         }
       } else {
         print(error!)
       }
     }
     let transferUtility = AWSS3TransferUtility.default()
-    _ = transferUtility.downloadData(
+    transferUtility.downloadData(
       forKey: "public/" + filename! + ".pdf",
       expression: expression,
       completionHandler: completionHandler

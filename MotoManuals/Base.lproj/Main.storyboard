@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLV-0s-6Xs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481" y="72"/>
+            <point key="canvasLocation" x="1480.8" y="71.514242878560722"/>
         </scene>
         <!--All Manuals-->
         <scene sceneID="89j-UW-y2B">
@@ -79,19 +78,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="50" id="Xsq-05-yOf" customClass="AvailableManualCell" customModule="MotoManuals" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="availableManualCell" rowHeight="50" id="Xsq-05-yOf" customClass="AvailableManualCell" customModule="MotoManuals" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xsq-05-yOf" id="fpM-PD-SId">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6w-w3-ixs">
-                                            <rect key="frame" x="16" y="0.0" width="313" height="44"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhN-vD-2bw">
                                             <rect key="frame" x="341" y="14" width="22" height="22"/>
                                             <constraints>
@@ -101,19 +94,33 @@
                                                 <action selector="downloadManual:" destination="Xsq-05-yOf" eventType="touchUpInside" id="WMy-ga-BpE"/>
                                             </connections>
                                         </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kvg-Is-Lrr">
+                                            <rect key="frame" x="10" y="15" width="321" height="20.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6w-w3-ixs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="321" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PBM-EW-YMD">
+                                                    <rect key="frame" x="-10" y="9.5" width="0.0" height="2"/>
+                                                </progressView>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="AhN-vD-2bw" firstAttribute="centerY" secondItem="fpM-PD-SId" secondAttribute="centerY" id="4qn-xI-nUH"/>
-                                        <constraint firstItem="p6w-w3-ixs" firstAttribute="top" secondItem="fpM-PD-SId" secondAttribute="top" id="5z6-Fm-Nsy"/>
                                         <constraint firstAttribute="trailing" secondItem="AhN-vD-2bw" secondAttribute="trailing" constant="12" id="JcZ-Hl-8rt"/>
-                                        <constraint firstItem="AhN-vD-2bw" firstAttribute="leading" secondItem="p6w-w3-ixs" secondAttribute="trailing" constant="12" id="nTh-NM-ifW"/>
-                                        <constraint firstItem="p6w-w3-ixs" firstAttribute="leading" secondItem="fpM-PD-SId" secondAttribute="leadingMargin" id="pPS-so-nZ0"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="p6w-w3-ixs" secondAttribute="bottom" constant="-5" id="yZ8-M6-YfG"/>
+                                        <constraint firstItem="kvg-Is-Lrr" firstAttribute="leading" secondItem="fpM-PD-SId" secondAttribute="leading" constant="10" id="XMO-Xy-rNH"/>
+                                        <constraint firstItem="kvg-Is-Lrr" firstAttribute="centerY" secondItem="fpM-PD-SId" secondAttribute="centerY" id="dah-hr-Xe7"/>
+                                        <constraint firstItem="AhN-vD-2bw" firstAttribute="leading" secondItem="kvg-Is-Lrr" secondAttribute="trailing" constant="10" id="w14-eU-YEk"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="myButton" destination="AhN-vD-2bw" id="GLP-3W-y87"/>
+                                    <outlet property="downloadButton" destination="AhN-vD-2bw" id="GLP-3W-y87"/>
                                     <outlet property="myLabel" destination="p6w-w3-ixs" id="LZM-c8-cjf"/>
+                                    <outlet property="myProgressView" destination="PBM-EW-YMD" id="uGu-0m-2Da"/>
                                     <segue destination="1v3-Pk-Rvg" kind="show" identifier="showTOC" id="bLa-YD-4nh"/>
                                 </connections>
                             </tableViewCell>
@@ -129,7 +136,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qg-FP-xmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82" y="72"/>
+            <point key="canvasLocation" x="-82.400000000000006" y="71.514242878560722"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UoC-6M-Z6D">
