@@ -43,7 +43,7 @@ class PDFViewController: UIViewController {
   }
   
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    self.pdfView?.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+    self.pdfView?.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height + 40)
     self.pdfView?.sizeToFit()
   }
 }
