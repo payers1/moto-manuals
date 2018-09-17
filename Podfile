@@ -7,8 +7,6 @@ target 'MotoManuals' do
 
   # Pods for MotoManuals
   pod 'AWSS3'
-  pod 'AWSPinpoint', '~> 2.6.13'
   pod 'AWSMobileClient', '~> 2.6.13'
   pod 'AWSUserPoolsSignIn', '~> 2.6.13'
-  pod 'CircleProgressView', '~> 1.0'
 end
