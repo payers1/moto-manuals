@@ -131,8 +131,17 @@
                             <outlet property="delegate" destination="yjW-pc-db5" id="xxb-lF-WmH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="All Manuals" largeTitleDisplayMode="never" id="VNY-en-MkO"/>
+                    <navigationItem key="navigationItem" title="All Manuals" largeTitleDisplayMode="never" id="VNY-en-MkO">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" style="plain" id="xK2-2a-vIx">
+                            <connections>
+                                <action selector="editButtonPress:" destination="yjW-pc-db5" id="bh7-tH-EEO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="editButton" destination="xK2-2a-vIx" id="cKn-b6-ial"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qg-FP-xmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

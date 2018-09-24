@@ -9,6 +9,18 @@
 import UIKit
 
 class AvailableManualsViewController: UITableViewController {
+  @IBOutlet weak var editButton: UIBarButtonItem!
+  
+  @IBAction func editButtonPress(_ sender: UIButton) {
+    if (self.tableView.isEditing) {
+      self.tableView.setEditing(false, animated: true)
+      self.editButton.title = "Edit"
+    } else {
+      self.tableView.setEditing(true, animated: true)
+      self.editButton.title = "Done"
+    }
+  }
+  
   let fileManager = FileManager.default
   
   let availableManuals = [
@@ -77,4 +89,19 @@ class AvailableManualsViewController: UITableViewController {
     }
     return false
   }
+  
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    if (editingStyle == .delete) {
+      let tocFilename = DocumentsDirectory.path + "/" + availableManuals[indexPath.row][1] + "_TOC.json"
+      let pdfFilename = DocumentsDirectory.path + "/" + availableManuals[indexPath.row][1] + ".pdf"
+      do {
+        try fileManager.removeItem(atPath: tocFilename)
+        try fileManager.removeItem(atPath: pdfFilename)
+        self.tableView.reloadData()
+      } catch {
+        print(error)
+      }
+    }
+  }
+  
 }
