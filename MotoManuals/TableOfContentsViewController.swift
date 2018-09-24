@@ -8,21 +8,6 @@
 
 import UIKit
 
-struct TableOfContents: Codable {
-  var sections: [Section]
-}
-
-struct Section: Codable {
-  var title: String?
-  var chapters: [Chapter]
-}
-
-struct Chapter: Codable {
-  var title: String
-  var page: Int
-}
-
-
 var TOC: TableOfContents = TableOfContents(sections: [])
 
 class TableOfContentsViewController: UITableViewController {

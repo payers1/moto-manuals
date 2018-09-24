@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58B1BCB521595226003E0D1A /* TableOfContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B1BCB421595226003E0D1A /* TableOfContents.swift */; };
 		58D4AC12212C6002005E26FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4AC11212C6002005E26FD /* AppDelegate.swift */; };
 		58D4AC19212C6002005E26FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D4AC17212C6002005E26FD /* Main.storyboard */; };
 		58D4AC1B212C6003005E26FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D4AC1A212C6003005E26FD /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		00004EBFEAE48A84C4FE0BD9 /* Pods-MotoManuals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotoManuals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MotoManuals/Pods-MotoManuals.debug.xcconfig"; sourceTree = "<group>"; };
 		02A40BB95C63024C983C57D6 /* Pods_MotoManuals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotoManuals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58B1BCB421595226003E0D1A /* TableOfContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContents.swift; sourceTree = "<group>"; };
 		58D4AC0E212C6002005E26FD /* MotoManuals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotoManuals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D4AC11212C6002005E26FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58D4AC18212C6002005E26FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58B1BCB621595253003E0D1A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58B1BCB421595226003E0D1A /* TableOfContents.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		58D4AC05212C6002005E26FD = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 				58E071E02141A0CF00E91078 /* TableOfContentsViewController.swift */,
 				58FBC737214435B60033F21C /* awsconfiguration.json */,
 				58E071E22141B15B00E91078 /* PDFViewController.swift */,
+				58B1BCB621595253003E0D1A /* Models */,
 				58D4AC17212C6002005E26FD /* Main.storyboard */,
 				58D4AC1A212C6003005E26FD /* Assets.xcassets */,
 				58D4AC1C212C6003005E26FD /* LaunchScreen.storyboard */,
@@ -235,6 +246,7 @@
 				58E071E32141B15B00E91078 /* PDFViewController.swift in Sources */,
 				58D4AC12212C6002005E26FD /* AppDelegate.swift in Sources */,
 				58E071E12141A0CF00E91078 /* TableOfContentsViewController.swift in Sources */,
+				58B1BCB521595226003E0D1A /* TableOfContents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
